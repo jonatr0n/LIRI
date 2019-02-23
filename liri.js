@@ -35,7 +35,7 @@ switch (liriFunction) {
 function movieThis() {
     var queryUrl = "http://www.omdbapi.com/?t=" + userQuery + "&y=&plot=short&apikey=babcdc33";
     request(queryUrl, function (error, response, body) {
-        if (!userQuery) {userQuery = "Mr Nobody";} //Not sure if it pulls if error on userQuery or if it can't find userQuery
+        if (!userQuery) { userQuery = "Mr Nobody"; } //Not sure if it pulls if error on userQuery or if it can't find userQuery
         else if (!error && response.statusCode === 200) {
             var myMovieData = JSON.parse(body);
             var queryUrlResults =
@@ -104,16 +104,24 @@ function bandsInTown() {
 
 //Do What It Says Functionality
 function doWhatItSays() {
-
-    fs.writeFile("random.txt", 'spotify-this-song,"The Sign"', function (err) {
-        var song = "spotify-this-song 'The Sign'"
-        // If the code experiences any errors it will log the error to the console.
-        if (err) {
-            return console.log(err);
-        };
-
-        // Otherwise, it will print:
-        console.log(song);
-    });
-};
+    fs.readFile('random.txt', 'utf8', function (error, data) {
+        if (error) {
+            console.log(error);
+        } else {
+            var dataArray = data.split(',');
+            var dataCommand = dataArray[0];
+            var dataInput = dataArray[1];
+            console.log(dataCommand);
+            console.log(dataInput);
+            switch (dataCommand) {
+                case "spotify-this-song":
+                    userQuery = dataInput;
+                    spotifyThisSong();
+                    break;
+                default:
+                    console.log(`Something went wrong!`)
+            }
+        }
+    })
+}
 
