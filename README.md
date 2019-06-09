@@ -9,3 +9,18 @@ spotify-this-song
 movie-this
 
 do-what-it-says
+
+TECHNOLOGIES USED
+
+Javascript
+Nodejs
+Node packages:
+Node-Spotify-API
+Request
+Moment
+DotEnv
+APIs used:
+Bands in Town
+OMDB
+Git
+GitHub
