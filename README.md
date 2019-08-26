@@ -1,26 +1,17 @@
-# LIRI
+liri-node-app
+LIRI stands for Language Interpretation and Recognition Interface. LIRI is a command line node app that takes in parameters and gives you back data.
 
-LIRI is a Language Interpretation and Recognition Interface. LIRI is a command line node app that takes in parameters and gives back data. The user has the option of using four commands (listed below) in conjuntion with specific parameters associated with the commands. The Commands are:
+Getting Started
+Download or clone the Git Repository will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-concert-this
+Make liri.js take in one of the following commands:
 
-spotify-this-song
+concert-this spotify-this-song movie-this do-what-it-says
 
-movie-this
+What Each Command Should Do
+Navigate to the local directory of the project inside your Terminal. Enter the following command to render information based on your search request:
 
-do-what-it-says
-
-TECHNOLOGIES USED
-
-Javascript
-Nodejs
-Node packages:
-Node-Spotify-API
-Request
-Moment
-DotEnv
-APIs used:
-Bands in Town
-OMDB
-Git
-GitHub
+node liri.js concert-this <artist/band name here>
+node liri.js spotify-this-song <song name here>
+  node liri.js movie-this <movie name here>
+  node liri.js do-what-it-says
