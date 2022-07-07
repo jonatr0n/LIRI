@@ -13,7 +13,7 @@
     "axios": "^0.18.0",
     "bandsintown": "^1.0.1",
     "dotenv": "^6.2.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "request": "^2.87.0",
     "node-spotify-api": "^1.0.7",
     "twitter": "^1.7.1"
